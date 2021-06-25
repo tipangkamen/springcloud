@@ -1,2 +1,12 @@
 server:
   port: 80
+
+eureka:
+  client:
+    #表示是否将自己注册进EurekaService,默认为true
+    register-with-eureka: true
+    #是否从EurekaServer抓取已有的注册信息，默认为true，单节点无所谓，集群需要设置为true
+    fetch-registry: true
+    service-url:
+      #defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+      defaultZone: http://localhost:7001/eureka
